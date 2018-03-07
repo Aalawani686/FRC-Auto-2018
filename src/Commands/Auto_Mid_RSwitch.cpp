@@ -7,6 +7,7 @@
 #include "ArmMin.h"
 #include "MoveLiftToMinHeight.h"
 #include "Test_Mechs.h"
+#include "ArmPositionPID.h"
 //#include "Constants.h"
 
 Auto_Mid_RSwitch::Auto_Mid_RSwitch() {
@@ -24,5 +25,7 @@ Auto_Mid_RSwitch::Auto_Mid_RSwitch() {
 	AddParallel(new Test_Mechs());
 	AddSequential(new Delay(.5));
 	AddSequential(new DriveForward(Score_Mid));
-	AddSequential(new ReleaseCrate());
+	AddParallel(new ReleaseCrate());
+	AddSequential(new ArmPositionPID());
+
 }

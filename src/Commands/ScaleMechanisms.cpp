@@ -22,7 +22,7 @@ ScaleMechanisms::ScaleMechanisms() {
 	AddSequential(new ResetLiftEnc(0.1));
 
 	AddParallel(new MoveLiftToHeight(21));
-	AddSequential(new AutoArmMove(270));
+	AddSequential(new AutoArmMove(360));
 
 	AddSequential(new ArmPositionPID());
 }

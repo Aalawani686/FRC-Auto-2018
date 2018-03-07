@@ -11,8 +11,8 @@ ReleaseCrate::ReleaseCrate()
 // Called just before this Command runs the first time
 void ReleaseCrate::Initialize()
 {
-	catcher->moveLeft(0.75, catcher->Direction::in);
-	catcher->moveRight(0.75, catcher->Direction::in);
+	catcher->moveLeft(0.4, catcher->Direction::in);
+	catcher->moveRight(0.4, catcher->Direction::in);
 }
 
 // Called repeatedly when this Command is scheduled to run

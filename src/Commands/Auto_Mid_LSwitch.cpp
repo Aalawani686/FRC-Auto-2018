@@ -26,7 +26,9 @@ Auto_Mid_LSwitch::Auto_Mid_LSwitch() {
 	AddParallel(new Test_Mechs());
 	AddSequential(new Delay(.5));
 	AddSequential(new DriveForward(Score_Mid));
-	AddSequential(new ReleaseCrate());
+	AddParallel(new ReleaseCrate());
+	AddSequential(new ArmPositionPID());
+
 
 
 }

@@ -52,8 +52,8 @@ public:
 
 				//left
 				chooser.AddObject("Prioritize Scale Left", std::shared_ptr<LScaleSwitch>(new LScaleSwitch(s)));
-				chooser.AddObject("Prioritize Switch Left", std::shared_ptr<LSwitchScale>(new LSwitchScale("LLL")));
-				chooser.AddObject("Switch Left", std::shared_ptr<LSwitch>(new LSwitch(s)));
+				chooser.AddObject("Prioritize Switch Left", std::shared_ptr<LSwitchScale>(new LSwitchScale(s)));
+				chooser.AddObject("Switch Left", std::shared_ptr<LSwitch>(new LSwitch("LLL")));
 				chooser.AddObject("Scale Left", std::shared_ptr<LScale>(new LScale(s)));
 
 				//right
