@@ -5,22 +5,19 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-#include "SwitchMechanisms.h"
-#include "MoveLiftToMinHeight.h"
-#include "MoveLiftToHeight.h"
-#include "ArmPositionPID.h"
-#include "AutoArmMove.h"
-#include "ArmMin.h"
-#include <Commands/CommandGroup.h>
+#pragma once
 
-SwitchMechanisms::SwitchMechanisms() {
+#include <Commands/Command.h>
+#include "../Subsystems/Catcher.h"
+#include "../CommandBase.h"
 
-	AddParallel(new ArmMin());
-	AddSequential(new MoveLiftToMinHeight());
+class MoveCubeRight : public CommandBase {
+public:
+	MoveCubeRight();
+	void Initialize() override;
+	void Execute() override;
+	bool IsFinished() override;
+	void End() override;
+	void Interrupted() override;
+};
 
-	AddSequential(new AutoArmMove(100));
-	AddParallel(new MoveLiftToHeight(10));
-	AddSequential(new AutoArmMove(250));
-
-	AddSequential(new ArmPositionPID());
-}

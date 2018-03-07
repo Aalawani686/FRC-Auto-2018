@@ -27,6 +27,7 @@ using namespace std;
 #include "Commands/Auto_Mid_RSwitch.h"
 #include "Commands/Test_Mechs.h"
 #include "Commands/Auto_Left_Switch.h"
+#include "Commands/Auto_Left_LScale.h"
 
 
 class Robot: public frc::IterativeRobot {
@@ -69,7 +70,10 @@ public:
 				chooser.AddObject("Turn-90",std::shared_ptr<Turn>(new Turn(-90)));
 				chooser.AddObject("Turn90",std::shared_ptr<Turn>(new Turn(90)));
 				chooser.AddObject("Auto_Mid_Lswitch", std::shared_ptr<Auto_Mid_LSwitch>(new Auto_Mid_LSwitch()));
+				chooser.AddObject("Auto_Mid_Rswitch", std::shared_ptr<Auto_Mid_RSwitch>(new Auto_Mid_RSwitch()));
 				chooser.AddObject("100", std::shared_ptr<DriveForward>(new DriveForward(100)));
+				chooser.AddObject("Auto_L_switch", std::shared_ptr<Auto_Left_LScale>(new Auto_Left_LScale()));
+
 				/*chooser.AddObject("75", std::shared_ptr<DriveForward>(new DriveForward(75)));
 				chooser.AddObject("100", std::shared_ptr<DriveForward>(new DriveForward(100)));
 				chooser.AddObject("150", std::shared_ptr<DriveForward>(new DriveForward(150)));

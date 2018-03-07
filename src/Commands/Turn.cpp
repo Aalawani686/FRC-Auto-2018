@@ -26,7 +26,7 @@ void Turn::Execute() {
 	angle = drive->getAngle();
 	cout << "Angle: " << angle;
 	//double anglePID = pid->Tick(angle)/7.5;
-	double anglePID = pid->Tick(angle)/2;
+	double anglePID = pid->Tick(angle)/4.0;
 	//double anglePID = (pid->Tick((fabs((fabs((error)-bound*startDistPidValue))-bound*startDistPidValue)))); //*2.5
 
 	cout<<"AnglePid"<<anglePID<<endl;

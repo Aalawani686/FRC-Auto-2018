@@ -10,17 +10,20 @@
 #include "MoveLiftToHeight.h"
 #include "ArmPositionPID.h"
 #include "AutoArmMove.h"
-#include "AcquireCrate.h"
+#include "ReleaseCrate.h"
 #include "ArmMin.h"
+#include "ResetLiftEnc.h"
 #include <Commands/CommandGroup.h>
 
 Test_Mechs::Test_Mechs() {
 
-	AddParallel(new ArmMin());
-	AddSequential(new MoveLiftToMinHeight());
 
+	AddSequential(new ArmMin());
+	AddSequential(new MoveLiftToMinHeight());
+	AddSequential(new ResetLiftEnc(0.1));
 	AddSequential(new AutoArmMove(300));
 
-	AddSequential(new ArmPositionPID());
-	AddSequential(new AcquireCrate());
+	AddParallel(new ArmPositionPID());
+
+
 }

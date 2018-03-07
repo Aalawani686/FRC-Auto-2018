@@ -20,12 +20,13 @@ Auto_Mid_LSwitch::Auto_Mid_LSwitch() {
 	AddSequential(new Delay(.5));
 	AddSequential(new Turn(-90));
 	AddSequential(new Delay(.5));
-	AddSequential(new DriveForward(Cross_MidL-20));
+	AddSequential(new DriveForward(Cross_MidR-10));
 	AddSequential(new Delay(.5));
 	AddSequential(new Turn(90));
 	AddParallel(new Test_Mechs());
 	AddSequential(new Delay(.5));
 	AddSequential(new DriveForward(Score_Mid));
+	AddSequential(new ReleaseCrate());
 
 
 }
