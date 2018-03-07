@@ -16,7 +16,8 @@ LSwitchScale::LSwitchScale(std::string s) {
 		else if(s[1] == 'L'){
 			AddSequential(new Auto_Left_LScale());
 		}
-		else
+		else{
 			AddSequential(new DriveForward(To_Switch+Mid_Targets));
-
+			std::cout << "INNNNN HHHEEEEERRREEEEE" << std::endl;
+		}
 }

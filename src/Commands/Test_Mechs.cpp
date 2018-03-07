@@ -21,7 +21,7 @@ Test_Mechs::Test_Mechs() {
 	AddSequential(new ArmMin());
 	AddSequential(new MoveLiftToMinHeight());
 	AddSequential(new ResetLiftEnc(0.1));
-	AddSequential(new AutoArmMove(300));
+	AddSequential(new AutoArmMove(250));
 
 	AddParallel(new ArmPositionPID());
 

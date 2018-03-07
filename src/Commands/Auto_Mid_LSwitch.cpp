@@ -13,7 +13,7 @@
 
 
 Auto_Mid_LSwitch::Auto_Mid_LSwitch() {
-	AddSequential(new ArmMin());
+	AddParallel(new ArmMin());
 	AddSequential(new MoveLiftToMinHeight());
 	AddSequential(new Delay(.5));
 	AddSequential(new DriveForward(Forward_Mid));

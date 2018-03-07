@@ -52,7 +52,7 @@ public:
 
 				//left
 				chooser.AddObject("Prioritize Scale Left", std::shared_ptr<LScaleSwitch>(new LScaleSwitch(s)));
-				chooser.AddObject("Prioritize Switch Left", std::shared_ptr<LSwitchScale>(new LSwitchScale(s)));
+				chooser.AddObject("Prioritize Switch Left", std::shared_ptr<LSwitchScale>(new LSwitchScale("LLL")));
 				chooser.AddObject("Switch Left", std::shared_ptr<LSwitch>(new LSwitch(s)));
 				chooser.AddObject("Scale Left", std::shared_ptr<LScale>(new LScale(s)));
 
@@ -72,7 +72,7 @@ public:
 				chooser.AddObject("Auto_Mid_Lswitch", std::shared_ptr<Auto_Mid_LSwitch>(new Auto_Mid_LSwitch()));
 				chooser.AddObject("Auto_Mid_Rswitch", std::shared_ptr<Auto_Mid_RSwitch>(new Auto_Mid_RSwitch()));
 				chooser.AddObject("100", std::shared_ptr<DriveForward>(new DriveForward(100)));
-				chooser.AddObject("Auto_L_switch", std::shared_ptr<Auto_Left_LScale>(new Auto_Left_LScale()));
+				//chooser.AddObject("Auto_L_switch", std::shared_ptr<Auto_Left_LScale>(new Auto_Left_LScale()));
 
 				/*chooser.AddObject("75", std::shared_ptr<DriveForward>(new DriveForward(75)));
 				chooser.AddObject("100", std::shared_ptr<DriveForward>(new DriveForward(100)));
